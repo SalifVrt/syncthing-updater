@@ -158,7 +158,7 @@ if (-not $latestVersion) {
     exit 1
 }
 
-Write-Host "Current version: $($currentVersion ?? 'Not found')" -ForegroundColor White
+Write-Host "Current version: $($currentVersion ? $currentVersion : 'Not found')" -ForegroundColor White
 Write-Host "Latest version:  $latestVersion" -ForegroundColor White
 
 # Check if update is needed
